@@ -1,0 +1,52 @@
+{# app_Antiguedades/templates/inicio.html #}
+{% extends "base.html" %}
+
+{% block title %}Inicio - Tienda de Antigüedades{% endblock %}
+
+{% block content %}
+<div class="text-center py-5">
+    <h1 class="display-4 mb-4 text-dark">Bienvenido al Sistema de Administración de Antigüedades</h1>
+    <p class="lead text-secondary">Este sistema permite gestionar eficientemente los proveedores, clientes y las valiosas piezas de nuestra colección.</p>
+    
+    <div class="row mt-4">
+        <div class="col-md-8 offset-md-2">
+            <div class="card shadow-lg border-0">
+                <div class="card-body p-0">
+                    
+                </div>
+            </div>
+            <p class="mt-3 text-muted">Explora la historia y administra tu inventario con facilidad.</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100 border-primary">
+                <div class="card-body">
+                    <h5 class="card-title text-primary"><i class="fas fa-truck fa-2x mb-2"></i></h5>
+                    <p class="card-text">Gestión de Proveedores.</p>
+                    <a href="{% url 'ver_proveedores' %}" class="btn btn-outline-primary">Ver Proveedores</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100 border-success">
+                <div class="card-body">
+                    <h5 class="card-title text-success"><i class="fas fa-gem fa-2x mb-2"></i></h5>
+                    <p class="card-text">Inventario de Piezas de Antigüedad.</p>
+                    <a href="{% url 'ver_piezas' %}" class="btn btn-outline-success">Ver Piezas</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100 border-info">
+                <div class="card-body">
+                    <h5 class="card-title text-info"><i class="fas fa-users fa-2x mb-2"></i></h5>
+                    <p class="card-text">Administración de Clientes.</p>
+                    <a href="#" class="btn btn-outline-info disabled">Ver Clientes (Pendiente)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
